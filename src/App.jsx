@@ -1,13 +1,9 @@
+import { CARDS_OBJECTS } from "./data";
+
 const myReactTitles = [
   "Bases de React",
-  "Componentes",
-  "Propiedades",
-  "Estados",
-  "Contexto",
-  "Hooks",
-  "Render Props",
-  "Error Boundaries",
-  "Portales",
+  "Principios de React",
+  "Fundamentos de React",
 ];
 
 function getNumberRandoms(min, max) {
@@ -28,13 +24,13 @@ function Header() {
   );
 }
 
-function CoreConcepts() {
+function CoreConcepts(props) {
   return (
     <>
       <div className="m-4 flex flex-col items-center bg-red-400 rounded-xl">
-        <img src="./react.svg" alt="Imagen de React" />
-        <h2>Título 2</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <img src={props.src} alt="Imagen de vite" />
+        <h2>{props.title}</h2>
+        <p className="flex wrap-break-word">{props.description}</p>
       </div>
     </>
   );
@@ -45,11 +41,28 @@ function App() {
     <>
       <Header />
       <section className="flex flex-col items-center justify-center bg-blue-400 m-12">
-        <h2 className="text-4xl">Funciones Principales</h2>
-        <div className="flex flex-row">
-          <CoreConcepts />
-          <CoreConcepts />
-          <CoreConcepts />
+        <h2 className="text-4xl underline">Caracteristicas Principales</h2>
+        <div className="flex flex-row justify-center gap-4">
+          <CoreConcepts
+            src={CARDS_OBJECTS[0].src}
+            title={CARDS_OBJECTS[0].title}
+            description={CARDS_OBJECTS[0].description}
+          />
+          <CoreConcepts
+            src={CARDS_OBJECTS[1].src}
+            title={CARDS_OBJECTS[1].title}
+            description={CARDS_OBJECTS[1].description}
+          />
+          <CoreConcepts
+            src={CARDS_OBJECTS[2].src}
+            title={CARDS_OBJECTS[2].title}
+            description={CARDS_OBJECTS[2].description}
+          />
+          <CoreConcepts
+            src={CARDS_OBJECTS[3].src}
+            title={CARDS_OBJECTS[3].title}
+            description={CARDS_OBJECTS[3].description}
+          />          
         </div>
       </section>
       <main></main>
