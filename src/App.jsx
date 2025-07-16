@@ -1,8 +1,13 @@
 import Header from "./components/Header.jsx";
 import CoreConcepts from "./components/CoreConcepts.jsx";
-import {CARDS_OBJECTS} from "./data.js"
+import { CARDS_OBJECTS } from "./data.js";
+import { TabButton } from "./components/TabButton.jsx";
 
 function App() {
+  const handleClickMenu = () => {
+    console.log("Estamos dando click a un botón");
+  };
+
   return (
     <>
       <Header />
@@ -18,6 +23,15 @@ function App() {
             description={CARDS_OBJECTS[3].description}
           />
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center">
+        <h2>Ejemplos de React</h2>
+        <menu className="flex flex-row m-5 gap-2.5">
+          <TabButton onClick={handleClickMenu}>Componentes</TabButton>
+          <TabButton>JSX</TabButton>
+          <TabButton>Props</TabButton>
+          <TabButton>Estados</TabButton>
+        </menu>
       </section>
       <main></main>
     </>
