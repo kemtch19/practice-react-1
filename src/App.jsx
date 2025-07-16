@@ -4,8 +4,8 @@ import { CARDS_OBJECTS } from "./data.js";
 import { TabButton } from "./components/TabButton.jsx";
 
 function App() {
-  const handleClickMenu = () => {
-    console.log("Estamos dando click a un botón");
+  const handleClickMenu = (selectedButton) => {
+    console.log(`Estas presionando el botón ${selectedButton}`);
   };
 
   return (
@@ -27,10 +27,10 @@ function App() {
       <section className="flex flex-col items-center justify-center">
         <h2>Ejemplos de React</h2>
         <menu className="flex flex-row m-5 gap-2.5">
-          <TabButton onClick={handleClickMenu}>Componentes</TabButton>
-          <TabButton>JSX</TabButton>
-          <TabButton>Props</TabButton>
-          <TabButton>Estados</TabButton>
+          <TabButton onClick={()=>handleClickMenu("Componentes")}>Componentes</TabButton>
+          <TabButton onClick={()=>{handleClickMenu("JSX")}}>JSX</TabButton>
+          <TabButton onClick={()=>{handleClickMenu("Props")}}>Props</TabButton>
+          <TabButton onClick={()=>{handleClickMenu("Estados")}}>Estados</TabButton>
         </menu>
       </section>
       <main></main>
