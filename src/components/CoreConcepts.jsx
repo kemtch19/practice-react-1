@@ -1,11 +1,9 @@
-export default function CoreConcepts({ src, title, description }) {
+export const CoreConcepts = ({ src, title, description }) => {
   return (
-    <>
-      <div className="m-4 flex flex-col items-center bg-red-400 rounded-xl">
-        <img src={src} alt={`Imagen de ${title}`} />
-        <h2>{title}</h2>
-        <p className="flex wrap-break-word">{`${description} hola que tal`}</p>
-      </div>
-    </>
+    <div className="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+      <img src={src} alt={title} className="w-20 h-20 mb-4" />
+      <h3 className="text-xl font-semibold text-emerald-700 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
   );
-}
+};
