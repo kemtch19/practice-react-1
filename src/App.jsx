@@ -3,13 +3,11 @@ import { CoreConceptsSection } from "./components/CoreConceptsSection.jsx";
 import { ExampleSection } from "./components/ExampleSection.jsx";
 
 function App() {
-  
   return (
     <>
       <Header />
-      <CoreConceptsSection/>
+      <CoreConceptsSection />
       <ExampleSection />
-      <main></main>
     </>
   );
 }

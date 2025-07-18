@@ -3,7 +3,7 @@ import { useState } from "react";
 import { EXAMPLES } from "../data.js";
 
 export const ExampleSection = () => {
-    const [selectedTopic, setSelectedTopic] = useState(null);
+  const [selectedTopic, setSelectedTopic] = useState(null);
 
   const handleClickMenu = (selectedButton) => {
     setSelectedTopic(selectedButton);
@@ -23,9 +23,9 @@ export const ExampleSection = () => {
     );
   }
 
-    return (
-        <>
-            <section className="flex flex-col items-center justify-center">
+  return (
+    <>
+      <section className="flex flex-col items-center justify-center">
         <h2>Ejemplos de React</h2>
         <menu className="flex flex-row m-5 gap-2.5">
           <TabButton
@@ -61,6 +61,6 @@ export const ExampleSection = () => {
         </menu>
         {tabContent}
       </section>
-        </>
-    );
+    </>
+  );
 };
