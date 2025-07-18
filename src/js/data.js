@@ -2,7 +2,7 @@ import viteImage from "/vite.svg";
 import reactImage from "/react.svg";
 import stateImage from "/Estados.png";
 
-export const CARDS_OBJECTS = [
+export const REACT_CONCEPTS = [
   {
     src: viteImage,
     title: "React + Vite",

@@ -1,23 +1,15 @@
-function getNumberRandoms(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+export const Header = () => {
+  const winnerTitle = ["Blog de Kemtch", "React Blog", "Componentes de React"];
 
-const myReactTitles = [
-  "Bases de React",
-  "Principios de React",
-  "Fundamentos de React",
-];
-
-export default function Header() {
-  const winnerTitle =
-    myReactTitles[getNumberRandoms(0, myReactTitles.length - 1)];
+  const getRandomTitleIndex = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
   return (
-    <header className="flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-center flex justify-center items-center text-red-700 ">
-        {winnerTitle}
+    <header className="bg-gradient-to-r from-blue-300 to-indigo-700 h-24 flex items-center justify-center shadow-lg">
+      <h1 className="text-white text-3xl md:text-4xl font-semibold tracking-wide px-6 py-3 rounded-xl bg-red-500 bg-opacity-90 shadow-md hover:scale-105 transition-transform duration-300">
+        {winnerTitle[getRandomTitleIndex(0, 2)]}
       </h1>
-      <p>Lorem ipsum dolor sit amet.</p>
     </header>
   );
-}
+};

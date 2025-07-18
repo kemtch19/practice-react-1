@@ -1,6 +1,6 @@
-import Header from "./components/Header.jsx";
-import { CoreConceptsSection } from "./components/CoreConceptsSection.jsx";
-import { ExampleSection } from "./components/ExampleSection.jsx";
+import { Header } from "./components/Header";
+import { CoreConceptsSection } from "./components/CoreConceptsSection";
+import { ExampleSection } from "./components/ExampleSection";
 
 function App() {
   return (
