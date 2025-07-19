@@ -1,6 +1,7 @@
 import { TabButton } from "./TabButton";
 import { EXAMPLES } from "../js/data";
 import { useState } from "react";
+import { Section } from "./Section";
 
 export const ExampleSection = () => {
   const [selectedTopic, setSelectedTopic] = useState(null);
@@ -33,40 +34,15 @@ export const ExampleSection = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center p-10 bg-emerald-100">
-        <h2 className="text-4xl font-bold text-emerald-800 mb-6">
-          🌱 Ejemplos de Código React
-        </h2>
-
+      <Section title="🌱 Ejemplos de Código React" className="flex flex-col items-center justify-center p-10 bg-emerald-100">
         <menu className="flex flex-wrap gap-4 justify-center mb-6">
-          <TabButton
-            isSelected={selectedTopic === "components"}
-            onClick={() => handleClickMenu("components")}
-          >
-            Componentes
-          </TabButton>
-          <TabButton
-            isSelected={selectedTopic === "jsx"}
-            onClick={() => handleClickMenu("jsx")}
-          >
-            JSX
-          </TabButton>
-          <TabButton
-            isSelected={selectedTopic === "props"}
-            onClick={() => handleClickMenu("props")}
-          >
-            Props
-          </TabButton>
-          <TabButton
-            isSelected={selectedTopic === "state"}
-            onClick={() => handleClickMenu("state")}
-          >
-            useState
-          </TabButton>
+          <TabButton isSelected={selectedTopic === "components"} onClick={() => handleClickMenu("components")}> Componentes </TabButton>
+          <TabButton isSelected={selectedTopic === "jsx"} onClick={() => handleClickMenu("jsx")} > JSX </TabButton>
+          <TabButton isSelected={selectedTopic === "props"} onClick={() => handleClickMenu("props")} > Props </TabButton>
+          <TabButton isSelected={selectedTopic === "state"} onClick={() => handleClickMenu("state")} > useState </TabButton>
         </menu>
-
         {tabContent}
-      </section>
+      </Section>
     </>
   );
 };
